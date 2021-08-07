@@ -1,0 +1,12 @@
+# Ignore top-level dotfiles and dotdirs
+.*/**
+
+# Ignore static assets
+./static/**
+./lang/**
+
+# Ignore project specific files
+CHANGELOG.md
+LICENSE.md
+
+# vim:ft=gitignore
