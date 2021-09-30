@@ -6,89 +6,15 @@
 <script src="static/components/prism-core.min.js"></script>
 <script src="static/plugins/autoloader/prism-autoloader.min.js"></script>
 
-<!-- <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css"
-  integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/> -->
-<!-- <script
-  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"
-  integrity="sha512-hM0R3pW9UdoNG9T+oIW5pG9ndvy3OKChFfVTKzjyxNW9xrt6vAbD3OeFWdSLQ8mjKSgd9dSO3RXn3tojQtiA8Q=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"
-  integrity="sha512-xCfKr8zIONbip3Q1XG/u5x40hoJ0/DtP1bxyMEi0GWzUFoUffE+Dfw1Br8j55RRt9qG7bGKsh+4tSb1CvFHPSA=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-></script> -->
+<!-- Mermaid -->
+<script src="static/mermaid.min.js"></script>
+<script>
+  window.addEventListener("load", mermaid.initialize({
+    'startOnLoad': true,
+    'theme': 'dark'
+  }))
+</script>
 
-<style type="text/css">
-  html {
-    filter: invert(0.95);
-  }
-
-  body {
-    background: #fffdf6 !important;
-  }
-
-  body div.zettel-view .zettel-content p code,
-  li code,
-  ol code {
-    background-color: #e6dfda !important;
-  }
-
-  body code,
-  pre,
-  tt,
-  .monoFont {
-    font-family: 'Roboto Mono', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas',
-      'Liberation Mono', 'Courier New', monospace !important;
-  }
-
-  span.vimiumHelpDialogKey {
-    background-color: rgb(243, 243, 243);
-    color: rgb(33, 33, 33);
-    margin-left: 2px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 4px;
-    padding-right: 4px;
-    border-radius: 3px;
-    border: solid 1px #ccc;
-    border-bottom-color: #bbb;
-    box-shadow: inset 0 -1px 0 #bbb;
-    font-family: monospace;
-    font-size: 11px;
-  }
-
-  /* :not(pre)>code[class*=language-] */
-  div.pandoc pre[class*='language-'] {
-    background: #f5f2f0;
-    padding: 1em;
-    margin: 0.5em 0;
-    color: #000;
-    text-shadow: 0 1px #fff;
-    /*    font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace; */
-    font-size: 1em;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 1.5;
-    tab-size: 4;
-    hyphens: none;
-  }
-
-  section.tag-query-results div.ui.horizontal.divider {
-    display: none;
-  }
-
-  section.tag-query-results span.ui.basic.pointing {
-    display: none;
-  }
-</style>
+<link href="/static/dark-theme-fonts.css" rel="stylesheet">
+<link href="/static/dark-theme.css" rel="stylesheet">
+<link href="/static/custom.css" rel="stylesheet">

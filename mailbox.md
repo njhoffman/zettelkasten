@@ -1,0 +1,7 @@
+- Scan INBOX on cron job
+- Show total address count in a panel
+- Other panel is addresses for Spam / Personal / Etc
+- Add by address or domain
+- Each mailbox can be after read or before read sorting
+- Import unroll.me list
+- Figure out reliable archiving system

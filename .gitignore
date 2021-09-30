@@ -5,6 +5,7 @@ coverage/
 node_modules/
 .neuron/
 .zk/
+.repos/
 
 index.db
 .pnp.js

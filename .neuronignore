@@ -3,7 +3,7 @@
 
 # Ignore static assets
 ./static/**
-./lang/**
+.repos/**
 
 # Ignore project specific files
 CHANGELOG.md
