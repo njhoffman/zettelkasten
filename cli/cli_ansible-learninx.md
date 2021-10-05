@@ -1,6 +1,7 @@
 ---
-tags: [cli, infrastructure]
-title: (cli) Ansible [learninx]
+title: (cli) ansible [learninx]
+tags: [cli, learninx, infrastructure, ansible]
+
 ---
 
 ## Introduction

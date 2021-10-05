@@ -1,6 +1,6 @@
 ---
 title: (cli) hyperfine
-tags: hyperfine, profiling
+tags: [cli, hyperfine, profiling]
 ---
 
 ## Hyperfine: a command line benchmarking tool

@@ -1,6 +1,6 @@
 ---
 title: (cli) cmake [learninx]
-tags: cmake, learninx
+tags: [cli, cmake, learninx]
 ---
 
 CMake is a cross-platform, open-source build system. This tool allows you to test,

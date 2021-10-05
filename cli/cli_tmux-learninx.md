@@ -1,6 +1,6 @@
 ---
 title: (cli) tmux [learninx]
-tags: tmux, learninx
+tags: [cli, tmux, learninx]
 ---
 
 

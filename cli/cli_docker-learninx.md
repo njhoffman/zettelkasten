@@ -1,6 +1,6 @@
 ---
 title: (cli) docker [learninx]
-tags: docker, learninx
+tags: [cli,docker,infrastructure,learninx]
 ---
 
 ```bat

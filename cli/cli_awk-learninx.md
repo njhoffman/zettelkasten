@@ -1,6 +1,6 @@
 ---
 title: (cli) AWK [learninx]
-tags: awk, learninx
+tags: [cli, awk, learninx]
 ---
 
 AWK is a standard tool on every POSIX-compliant UNIX system. It's like

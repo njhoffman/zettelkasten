@@ -1,6 +1,6 @@
 ---
 title: (cli) less [learninx]
-tags: less, learninx
+tags: [cli, less, learninx]
 ---
 
 

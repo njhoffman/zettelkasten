@@ -1,6 +1,6 @@
 ---
 title: (cli) make [learninx]
-tags: make, learninx
+tags: [cli, make, learninx]
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: (cli) git [learninx]
-tags: git, learninx
+tags: [cli, git, learninx]
 ---
 
 

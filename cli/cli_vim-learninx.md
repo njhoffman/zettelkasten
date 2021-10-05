@@ -1,6 +1,6 @@
 ---
 title: (cli) vim [learninx]
-tags: vim, learninx
+tags: [cli, vim, learninx]
 ---
 
 
