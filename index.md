@@ -22,11 +22,8 @@ dirtree:
 ## References
 
 * [[cli]]#
-
 * [[cli-categories]]#
-
 * [[lang]]#
-
 * [[libs]]#
 
 
