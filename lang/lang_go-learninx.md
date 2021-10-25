@@ -1,6 +1,6 @@
 ---
 title: (lang) Go [learninx]
-tags: go, learninx
+tags: [lang, go, learninx]
 ---
 
 Go was created out of the need to get work done. It's not the latest trend

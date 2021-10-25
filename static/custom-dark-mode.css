@@ -1,0 +1,63 @@
+html > body {
+  /* color: rgb(141, 141, 141); */
+  background: rgb(15, 15, 15) !important;
+}
+body div.zettel-view .zettel-content code {
+  color: rgb(180, 190, 210) !important;
+}
+
+body div#zettel-container .zettel-content h1 {
+  background-color: rgb(3 63 60);
+  color: #ccc;
+}
+
+body div#zettel-container span.zettel-link-container span.zettel-link a {
+  color: rgb(100, 180, 226);
+}
+
+.token.attr-name,
+.token.builtin,
+.token.char,
+.token.inserted,
+.token.function,
+.token.selector  {
+  color: #3399bb !important;
+}
+
+.token.boolean,
+.token.constant,
+.token.deleted,
+.token.number,
+.token.property,
+.token.symbol,
+.token.tag {
+  color: #996666 !important;
+
+}
+
+.token.string {
+  color: #33ccbb;
+}
+
+.language-css .token.string,
+.token.entity,
+.token.operator,
+.token.important,
+.token.variable,
+.token.regex,
+.token.url {
+  background: none;
+  color: #3a6a9a !important;
+  /* color: #9a6e3a !important; */
+  /* background: hsla(0,0%,100%,.5); */
+}
+
+div.pandoc pre[class*='language-'] {
+  filter: invert(0) !important;
+  text-shadow: none !important;
+}
+
+code[class*=language-], pre[class*=language-] {
+  text-shadow: none !important;
+  background: #121212 !important;
+}

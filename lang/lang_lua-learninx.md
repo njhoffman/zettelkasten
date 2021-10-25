@@ -1,6 +1,6 @@
 ---
-title: (lang) Javascript [learninx]
-tags: javascript, learninx
+title: (lang) Lua [learninx]
+tags: [lang, ua, learninx]
 ---
 
 ```lua

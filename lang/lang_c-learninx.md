@@ -1,6 +1,6 @@
 ---
 title: (lang) C [learninx]
-tags: c, learninx
+tags: [lang, c, learninx]
 ---
 
 Ah, C. Still **the** language of modern high-performance computing.

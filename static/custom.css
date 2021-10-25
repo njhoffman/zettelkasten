@@ -1,83 +1,83 @@
-  /* body {
-    background: #fffdf6 !important;
-  }
+/* body {
+background: #fffdf6 !important;
+}
 
-  body div.zettel-view .zettel-content p code,
-  li code,
-  ol code {
-    background-color: #e6dfda !important;
-  }
- */
+body div.zettel-view .zettel-content p code,
+li code,
+ol code {
+background-color: #e6dfda !important;
+}
+*/
 
-  body code,
-  pre,
-  tt,
-  .monoFont {
-    font-family: 'Roboto Mono', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas',
-      'Liberation Mono', 'Courier New', monospace !important;
-  }
+body code,
+pre,
+tt,
+.monoFont {
+  font-family: 'Roboto Mono', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas',
+    'Liberation Mono', 'Courier New', monospace !important;
+}
 
-  /* span.vimiumHelpDialogKey {
-    background-color: rgb(243, 243, 243);
-    color: rgb(33, 33, 33);
-    margin-left: 2px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 4px;
-    padding-right: 4px;
-    border-radius: 3px;
-    border: solid 1px #ccc;
-    border-bottom-color: #bbb;
-    box-shadow: inset 0 -1px 0 #bbb;
-    font-family: monospace;
-    font-size: 11px;
-  } */
-  /* :not(pre)>code[class*=language-] */
+/* span.vimiumHelpDialogKey {
+background-color: rgb(243, 243, 243);
+color: rgb(33, 33, 33);
+margin-left: 2px;
+padding-top: 1px;
+padding-bottom: 1px;
+padding-left: 4px;
+padding-right: 4px;
+border-radius: 3px;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+box-shadow: inset 0 -1px 0 #bbb;
+font-family: monospace;
+font-size: 11px;
+} */
+/* :not(pre)>code[class*=language-] */
 
-    /* Relax width constraint a bit */
-    #zettel-container {
-        max-width: 775px !important;
-    }
+/* Relax width constraint a bit */
+#zettel-container {
+  max-width: 775px !important;
+}
 
-    /* Hide uptree; remove this if you want the uptree to show */
-    #zettel-uptree {
-      /* display: none; !important; */
-    }
+/* Hide uptree; remove this if you want the uptree to show */
+#zettel-uptree {
+  /* display: none; !important; */
+}
 
-    .ui.raised.raised.segment, .ui.raised.raised.segments {
-      box-shadow: none;
-    }
+.ui.raised.raised.segment, .ui.raised.raised.segments {
+  box-shadow: none;
+}
 
-  div.pandoc pre[class*='language-'] {
-    filter: invert(0.95);
-    padding: 1em;
-    margin: 0.5em 0;
-    color: #000;
-    text-shadow: 0 1px #fff;
-    /*    font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace; */
-    font-size: 1em;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 1.5;
-    tab-size: 4;
-    hyphens: none;
-  }
+div.pandoc pre[class*='language-'] {
+  filter: invert(0.95);
+  padding: 1em;
+  margin: 0.5em 0;
+  color: #000;
+  text-shadow: 0 1px #fff;
+  /*    font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace; */
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+}
 
 body span.zettel-link-container span.zettel-link a:hover {
   color: #00e5dd;
-    background-color: rgba(0,181,173,0.1);
+  background-color: rgba(0,181,173,0.1);
 }
 body span.zettel-link-container span.zettel-link a {
-    font-weight: bold;
-    text-decoration: none;
+  font-weight: bold;
+  text-decoration: none;
 }
 body span.zettel-link-container span.zettel-link a {
-    color: #00a59d;
-    font-weight: bold;
-    text-decoration: none;
+  color: #00a59d;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 em, i {
@@ -87,10 +87,10 @@ em, i {
   font-size: inherit !important;
 }
 
-  /* section.tag-query-results div.ui.horizontal.divider {
-    display: none;
-  }
+/* section.tag-query-results div.ui.horizontal.divider {
+display: none;
+}
 
-  section.tag-query-results span.ui.basic.pointing {
-    display: none;
-  } */
+section.tag-query-results span.ui.basic.pointing {
+display: none;
+} */

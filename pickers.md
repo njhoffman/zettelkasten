@@ -91,7 +91,7 @@ fzflua
 - tabs
 - tags
 
-telescope
+Telescope
 - arecibo
 - autocommands
 - colorscheme

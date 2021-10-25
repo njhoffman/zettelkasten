@@ -1,6 +1,6 @@
 ---
 title: (lang) CSS [learninx]
-tags: css, learninx
+tags: [lang, css, learninx]
 ---
 
 Web pages are built with HTML, which specifies the content of a page.

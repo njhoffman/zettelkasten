@@ -1,6 +1,6 @@
 ---
 title: (lang) C++ [learninx]
-tags: c++, learninx
+tags: [lang, c++, learninx]
 ---
 
 C++ is a systems programming language that,

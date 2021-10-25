@@ -1,6 +1,6 @@
 ---
 title: (lang) SQL [learninx]
-tags: sql, learninx
+tags: [lang, sql, learninx]
 ---
 
 Structured Query Language (SQL) is an [ISO/IEC 9075](https://www.iso.org/standard/63555.html) standard language for creating and working with databases stored in a set of tables.

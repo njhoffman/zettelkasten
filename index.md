@@ -4,7 +4,6 @@ dirtree:
   display: false
 ---
 
-
 - [[135fb390]]
 - [[3c438a6a]]
 - [[8e6e92d1]]
@@ -22,10 +21,8 @@ dirtree:
 ## References
 
 * [[cli]]#
-* [[cli-categories]]#
 * [[lang]]#
 * [[libs]]#
-
 
 ```sh
 # vim:
