@@ -3,7 +3,7 @@ title: Nick's Zettelkasten
 dirtree:
   display: false
 ---
-
+- [[b5c75538]]
 - [[135fb390]]
 - [[3c438a6a]]
 - [[8e6e92d1]]

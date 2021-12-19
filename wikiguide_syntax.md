@@ -4,17 +4,29 @@ title: Wiki Syntax Languages
 
 ## Syntax Highlighting
 
+
+```sql
+SELECT * FROM languages WHERE id = 1;
+```
+
 ```javascript
 var s = 'JavaScript syntax highlighting';
 alert(s);
 ```
+
 ```sh
-echo "Hello from a shell: $PWD"
+echo "Hello from a shell: $PWD" >> /dev/tty
 ```
+
+```bash
+echo "Hello from a shell: $PWD" >> /dev/tty
+```
+
 ```python
 s = "Python syntax highlighting"
 print s
 ```
+
 ```go
 package main
 import "fmt"
@@ -22,9 +34,11 @@ func main() {
     fmt.Println("Go syntax highlighting")
 }
 ```
+
 ```ruby
 puts "Ruby syntax highlighting"
 ```
+
 ```c
 #include <stdio.h>
 int main() {
@@ -33,6 +47,7 @@ int main() {
    return 0;
 }
 ```
+
 ```cpp
 include <iostream>
 int main() {
@@ -40,6 +55,7 @@ int main() {
     return 0;
 }
 ```
+
 ```rust
 fn main() {
     println!("Rust syntax highligthing");
