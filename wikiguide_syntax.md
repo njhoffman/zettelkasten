@@ -4,7 +4,6 @@ title: Wiki Syntax Languages
 
 ## Syntax Highlighting
 
-
 ```sql
 SELECT * FROM languages WHERE id = 1;
 ```
@@ -31,7 +30,7 @@ print s
 package main
 import "fmt"
 func main() {
-    fmt.Println("Go syntax highlighting")
+  fmt.Println("Go syntax highlighting")
 }
 ```
 
@@ -42,17 +41,17 @@ puts "Ruby syntax highlighting"
 ```c
 #include <stdio.h>
 int main() {
-   // printf() displays the string inside quotation
-   printf("C syntax highlighting");
-   return 0;
+  // printf() displays the string inside quotation
+  printf("C syntax highlighting");
+  return 0;
 }
 ```
 
 ```cpp
 include <iostream>
 int main() {
-    std::cout << "C++ syntax highlighting";
-    return 0;
+  std::cout << "C++ syntax highlighting";
+  return 0;
 }
 ```
 
