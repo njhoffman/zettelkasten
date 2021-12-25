@@ -4,21 +4,27 @@ title: Wiki Syntax Languages
 
 ## Syntax Highlighting
 
-```sh
-echo "Hello from a shell: $PWD"
+```sql
+SELECT * FROM languages WHERE id = 1;
 ```
-
-- sql,
 
 ```javascript
   var s = 'JavaScript syntax highlighting';
   alert(s);
 ```
 
+```sh
+  echo "Hello from a shell: $PWD" >> /dev/tty
+```
+
 ```lua
   for val, key in pairs(arr) do
     print('Stupid lua arrays are 1 index based')
   end
+```
+
+```bash
+  echo "Hello from a shell: $PWD" >> /dev/tty
 ```
 
 ```python
@@ -30,7 +36,7 @@ echo "Hello from a shell: $PWD"
   package main
   import "fmt"
   func main() {
-      fmt.Println("Go syntax highlighting")
+    fmt.Println("Go syntax highlighting")
   }
 ```
 
@@ -59,9 +65,10 @@ echo "Hello from a shell: $PWD"
   fn main() {
       println!("Rust syntax highligthing");
   }
+```
+```
 
 NOTE: lua syntax code blocks generate errors
 
 No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
-```
