@@ -3,6 +3,7 @@ title: Nick's Zettelkasten
 dirtree:
   display: false
 ---
+
 - [[b5c75538]]
 - [[135fb390]]
 - [[3c438a6a]]
@@ -29,38 +30,13 @@ https://bitbucket.org/spadash/send-customer-appointment-receipts/src/master/
 send-customer-appointment-receipt
 - only tarps for now
 
+<!-- pandocReferenceLabel
+MarkVirtTextHL
+pandocOperator -->
 
 # /home/nicholas/.config/nvim
-# /etc/xdg/xdg-i3/nvim
-# /etc/xdg/nvim
-# /home/nicholas/.local/share/nvim/site
-# /home/nicholas/.local/share/nvim/site/pack/packer/opt/gitsigns.nvim
-# /home/nicholas/.local/share/nvim/site/pack/*/start/*
-# /home/nicholas/.local/share/nvim/site/pack/packer/opt/friendly-snippets
-# /home/nicholas/.local/share/nvim/site/pack/packer/opt/vs-snippets
-# /home/nicholas/.local/share/nvim/site/pack/packer/opt/cmp-vsnip
-# /home/nicholas/.local/share/nvim/site/pack/packer/start/packer.nvim
-# /usr/share/i3/nvim/site
-# /home/nicholas/.local/share/flatpak/exports/share/nvim/site
-# /var/lib/flatpak/exports/share/nvim/site
-# /usr/local/share/nvim/site
-# /usr/share/nvim/site
-# /var/lib/snapd/desktop/nvim/site
-# /home/nicholas/.local/share/nvenv/versions/0.6.0/share/nvim/runtime
-# /home/nicholas/.local/share/nvenv/versions/0.6.0/share/nvim/runtime/pack/dist/opt/matchit
-# /home/nicholas/.local/share/nvenv/versions/0.6.0/lib/nvim
-# /home/nicholas/.local/share/nvim/site/pack/*/start/*/after
-# /home/nicholas/.local/share/nvim/site/pack/packer/opt/cmp-vsnip/after
-# /var/lib/snapd/desktop/nvim/site/after
-# /usr/share/nvim/site/after
-# /usr/local/share/nvim/site/after
-# /var/lib/flatpak/exports/share/nvim/site/after
-# /home/nicholas/.local/share/flatpak/exports/share/nvim/site/after
-# /usr/share/i3/nvim/site/after
-# /home/nicholas/.local/share/nvim/site/after
-# /etc/xdg/nvim/after
-# /etc/xdg/xdg-i3/nvim/after
-# /home/nicholas/.config/nvim/after
+
+```
 
 ## Paths in LUA
 
@@ -81,10 +57,6 @@ application that calls lua, falls in the case c) as well as a lua C modules call
 
 The info 2) is in `arg[0]` just for the case a). However, for all the cases you can use:
 
-```
-path = debug.getinfo(1,"S").source:sub(2)
-```
-
 but remember that in c) what is returned is what you passed to `load` as third parameter
 (is up to you to specify correctly where you took the information).
 
@@ -95,29 +67,25 @@ However the info returned can be a RELATIVE path, e.g.:
 Sadly, if you really need the abolute path 3), you have to rely on os-dependent tricks.
 For linux you can use popen and realpath:
 
-```
-absolute = io.popen("realpath '"..path.."'", 'r'):read('a')
-absolute = absolute:gsub('[\n\r]*$','') -- needed to handle popen result
-```
-
 This give you the absolute path to the file, so for the step 4) you need a bit of
-string parsing to split path and name, e.g. `absolute:match('^(.*/)([^/]-)$')`.
+string parsing to split path and name, e.g.
 
 So putting all togheter:
 
-```
+
+```lua
+
 local fullpath = debug.getinfo(1,"S").source:sub(2)
 fullpath = io.popen("realpath '"..fullpath.."'", 'r'):read('a')
-fullpath = fullpath:gsub('[\n\r]*$','')
-
-local dirname, filename = fullpath:match('^(.*/)([^/]-)$')
+<!-- fullpath = fullpath:gsub('[\n\r]*$','') -->
+<!-- local dirname, filename = fullpath:match('^(.*/)([^/]-)$') -->
 dirname = dirname or ''
 filename = filename or fullpath
 ```
 
 
-```sh
 
+```sh
 
 # For a script that works in both bash and zsh, you need to use a more complicated syntax.
 # Eg, to reference the first element in an array:

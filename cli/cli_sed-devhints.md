@@ -1,6 +1,5 @@
 ---
 title: (cli) sed [devhints]
-tags: [cli,devhints,sed,formatting]
 ---
 
 ## In place replacements

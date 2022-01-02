@@ -6,6 +6,7 @@ dirtree:
 
 - [[wikiguide_tables]]
 - [[wikiguide_syntax]]
+- [[wikiguide_extended_syntax]]
 
 **Markdown Styleguide**
 
