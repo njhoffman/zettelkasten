@@ -7,9 +7,6 @@ tags: [lang,devhints,bash,trap,redirection,subshells,switch,heredoc]
 
 ```sh
 $((a + 200))      # Add 200 to $a
-```
-
-```sh
 $(($RANDOM%200))  # Random number 0..199
 ```
 
@@ -29,9 +26,6 @@ python hello.py 2> error.log   # stderr to (file)
 python hello.py 2>&1           # stderr to stdout
 python hello.py 2>/dev/null    # stderr to (null)
 python hello.py &>/dev/null    # stdout and stderr to (null)
-```
-
-```sh
 python hello.py < foo.txt      # feed foo.txt to stdin for python
 ```
 
