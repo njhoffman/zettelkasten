@@ -36,7 +36,6 @@ pandocOperator -->
 
 # /home/nicholas/.config/nvim
 
-```
 
 ## Paths in LUA
 
@@ -86,6 +85,9 @@ filename = filename or fullpath
 
 
 ```sh
+
+# to disable trackpad
+xinput list && xinput --disable 12
 
 # For a script that works in both bash and zsh, you need to use a more complicated syntax.
 # Eg, to reference the first element in an array:
