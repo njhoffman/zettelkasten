@@ -1,3 +1,24 @@
+## iVueit
+- 2 core products: flagship & mobile application
+- Svelte, API uses golang, GRPC instead of traditional rest services
+- Kubernetes, Digital Ocean, Postgres SQL database broken down by microservice
+- 3 full time developers, need to scale up to 5
+- Jira, meet every morning, meet once every week
+
+## Redesign Health
+- based out of SF, fully remote
+- mix between VC firm and incubator
+- provides initial seed funding, also recruit and hire
+- laying foundation groundwork for companies to become independent
+- first engineer on company that just launched, support build of initial product
+- keen health: launched late last year, 5 team members, choosekeen.com
+- seniors signing up for medicare, avoid self-interested brokers
+- connect with local brokers in their community, scott matthews ceo
+- react Next.JS, light CRM based database, Postgres database, AWS, primarily web
+- 1st interview: assess React on codesignal (30-60 mins)
+- 2nd interview: virtual onsite, system architecture (60 minutes), one on one (30 minutes each)
+- - bidirectionality API, DBA experience
+
 ## Nacelle
 - Founded in 2019, fully remote, closed series B
 - 2021: 25 employees, currently 100, double in size by end of year
@@ -29,7 +50,7 @@
 - - expanding into CTV, publica is one of the vendors for CTV
 - - aggressive roadmap for CCTV
 - - publica had 10 devs, currently 25
-- 1st round: tech leads, code.io
+- 1st round: (3 hours) tech leads, code.io, data structures, algorithms
 
 ## Standard Bots
 - 2015, democratizing robotics to companies of all sizes
