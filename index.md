@@ -30,18 +30,19 @@ https://bitbucket.org/spadash/send-customer-appointment-receipts/src/master/
 send-customer-appointment-receipt
 - only tarps for now
 
-<!-- pandocReferenceLabel
-MarkVirtTextHL
-pandocOperator -->
-
-# /home/nicholas/.config/nvim
-
-
-## Country artists for people who don't like country
-Johnny Cash, George Jones, Shooter Jennings, Sturgill Simpson, Jason Isbell
-Kacey Musgraves, The Dixie Chicks, Emmylou Harris, Rosanne Cash, Maren Morris
-Wilco, Drive-By Truckers, Chris Stapleton, Loretta Lynn, Margo Price
-
+```bash
+# quick notes
+notes new todolist #  new lists/todo
+notes find <search> # (notes f) matching path names
+notes grep <search> # (notes g) search through notes
+notes ls <directory>
+notes open <note-name> # (notes o) note-name optional
+notes append <note-name> [message]
+notes mv <note-name> <destination>|<directory>
+notes rm [-r | --recursive] <note-name>
+notes cat <note-name>
+notes grep/find <pattern> | notes open
+```
 
 ## Paths in LUA
 
@@ -92,6 +93,17 @@ filename = filename or fullpath
 
 ```sh
 
+### redirecting with process elevation (sudo)
+sudo sh -c 'echo clock_hctosys=\"YES\" >> /etc/conf.d/hwclock'
+echo 'clock_hctosys="YES"' | sudo dd of=/etc/conf.d/hwclock oflag=append conv=notrunc
+echo 'clock_hctosys="YES"' | sudo tee -a /etc/conf.d/hwclock >/dev/null
+sudo tee -a /etc/conf.d/hwclock > /dev/null << EOF
+clock_hctosys="YES"
+EOF
+$ sudo -i
+# echo clock_hctosys=\"YES\" >> /etc/conf.d/hwclock'
+
+
 # to disable trackpad
 xinput list && xinput --disable 12
 
@@ -112,8 +124,6 @@ ${array[@]:0:1}
 # ctrl-shift-i: install
 # F1, F2 ... modes
 # S-F1, S-F2 ... toggles
-
-
 
 # $-p    -> M-p    : tmux attach _fz-repos
 # $-n/N  -> M-n/N  : swap panes with back window
