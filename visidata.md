@@ -42,3 +42,9 @@ c+reg  zc+r  zr+n   => jump to column matching regex, jump to column/row number
    / ?     g/ g?    => search column, search ALL columns
   Ctrl-^   Alt-#    => toggle between 2 sheets, switch to sheet num #
     _        g_     => auto fit column width, multiple column widths,
+
+
+\pset format csv
+\pset pager always
+\setenv PSQL_PAGER 'vd -f csv'
+\pset pager_min_lines

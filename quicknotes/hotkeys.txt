@@ -1,0 +1,24 @@
+
+## ZSH Hotkeys
+
+<c+->       : command-tmux-split
+<c+=>       : command-tmux-popup
+<c+i>       : insert paste
+<c+d>       : incremental delete
+<c+Z>       : fancy ctrl+z pop
+<c+x><x+c>  : insert last command output
+<c+quot>    : partial accept
+<c+dblquot>: full accept
+
+## Vim Hotkeys
+<c-x><tab>  : easy align with tab
+
+:v/\%V/d    line based pattern inverse
+"*y         yank it to the selection register
+ggdG        delete everything
+"*p         and paste the selection again
+
+-- NOTE: <C-X> to finish alignment with regex (i.e. <C-X><tab>)
+-- nmap <Leader>= <Plug>(EasyAlign)ip=``
+
+vim: ft=markdown.pandoc

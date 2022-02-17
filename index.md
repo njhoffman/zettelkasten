@@ -31,7 +31,47 @@ send-customer-appointment-receipt
 - only tarps for now
 
 ```bash
+
+printf %.10f\\n "$((10**9 * 20/7))e-9"   # many shells. Not mksh.
+ echo "$((20.0/7))"                       # (ksh93/zsh/yash, some bash)
+ awk "BEGIN {print (20+5)/2}"
+ zcalc
+ expr 20 + 5
+ calc 2 + 4
+ node -pe 20+5/2  # Uses the power of JavaScript, e.g. : node -pe 20+5/Math.PI
+ echo 20 5 2 / + p | dc
+ echo 4 k 20 5 2 / + p | dc
+ perl -E "say 20+5/2"
+ python -c "print(20+5/2)"
+ python -c "print(20+5/2.0)"
+ clisp -x "(+ 2 2)"
+ lua -e "print(20+5/2)"
+ php -r 'echo 20+5/2;'
+ ruby -e 'p 20+5/2'
+ ruby -e 'p 20+5/2.0'
+ guile -c '(display (+ 20 (/ 5 2)))'
+ guile -c '(display (+ 20 (/ 5 2.0)))'
+ slsh -e 'printf("%f",20+5/2)'
+ slsh -e 'printf("%f",20+5/2.0)'
+ psql -tAc 'select 1+1'
+ R -q -e 'print(sd(rnorm(1000)))'
+ r -e 'cat(pi^2, "\n")'
+ r -e 'print(sum(1:100))'
+ echo 'select 1 + 1;' | sqlite3
+ smjs
+ jspl
+`  bc <<< 20+5/2
+`  bc <<< "scale=4; (20+5)/2"
+`  dc <<< "4 k 20 5 + 2 / p"
+`  tclsh <<< 'puts [expr 20+5/2]'
+`  tclsh <<< 'puts [expr 20+5/2.0]'
+`  sqlite3 <<< 'select 20+5/2;'
+`  sqlite3 <<< 'select 20+5/2.0;'
+ gs -q  <<< "5 2 div 20 add  ="
+```
+
 # quick notes
+
 notes new todolist #  new lists/todo
 notes find <search> # (notes f) matching path names
 notes grep <search> # (notes g) search through notes
