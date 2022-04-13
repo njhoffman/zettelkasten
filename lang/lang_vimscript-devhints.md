@@ -1,4 +1,3 @@
-
 ---
 title: (lang) Vimscript [devhints]
 tags: [lang,devhints,vimscript]

@@ -1,3 +1,53 @@
+---
+title: Jobs Sheet
+---
+
+##
+- Founded in November,
+- veterinarian exam notes, patient records, appointment scheduling
+- AVImark, IDEXX Cornerstone (old), ezyVet is newest leading cloud solution
+- appointment scheduling, calendar, patient records
+- after seris a (10 months time) , invoicing, other management
+- 2 backend, 2 frontend (probably frontend, React)
+- 1% equity
+- 15 veterinarian advisers, already signed on, independent clinic owners
+- wireframes are developed, not too much developed
+
+## Axon
+- Hardware based, TASER international, body cameras
+- 2 years ago launched software as a backend, e2e information
+- Records team, facebook of crime solving
+- 911 dispatching solution - geared towards dispatchers, picking best first responder
+- live technical interview: golang, implement data structures and algorithms to solve a real world problem
+- final interview: 4x1 hour sessions -  2 of those about system design,  2 of those coding designs
+- 2 - 3 weeks turn around process
+
+## Flo-Sports
+- Digital sports, live streaming, 25 different sports
+- JS, Angular, NodeJS, Ruby on Rails, MySQL, Kubernetes, Docker
+- lead roku engineer:
+- senior front-end:
+- 55 engineers, 15 on product team
+- 301 congress ave
+- technical screen
+-- live coding exercise:
+- round robin interview
+
+
+## SmartSheet
+- SaaS - Collaborative work management
+- Denver, Seattle, Edinburgh
+- 2500 - 2600 worldwide
+- single page web app, enterprise 75% fortune 500
+- automating work processes, collecting data, enhancing team collaboration (xl workbook)
+- no code enterprise solution
+- 8-10 engineers per team, 21 pillars (1-4 teams) (50 teams total)
+- all teams own CI/CD pipeline
+- MySQL, AWS, Typescript, React/Redux, Service Design
+- App Core engineering: Infrastructure centered,terraform, Python, Go, React, Kubernetes
+- 1st 1 hour: live coding, hired assessments, any language (data structures algorithms)
+- 2nd 4.5 hours: 1 hour hiring manager, 1 hour service design
+
 ## iVueit
 - 2 core products: flagship & mobile application
 - Svelte, API uses golang, GRPC instead of traditional rest services
@@ -51,6 +101,19 @@
 - - aggressive roadmap for CCTV
 - - publica had 10 devs, currently 25
 - 1st round: (3 hours) tech leads, code.io, data structures, algorithms
+- Hadoop:
+-- PIG (Hadoop) (sql like)
+-- JIRA (bitbucket)
+-- Team manager: reports Mekhan, reports to Publica CEO
+-- 28 engineers, 4 managers, several products
+-- Daily standups
+-- IAS (200 engineers) Angular migrating to React
+-- Aerospike keys, GRPCS cluster, in memory aggregation every 30 seconds
+-- high QPS
+-- most in silicon valley, UK, LA, NY, Chicago
+- CI system
+-- CircleCI: IAS has circle CI
+
 
 ## Standard Bots
 - 2015, democratizing robotics to companies of all sizes
