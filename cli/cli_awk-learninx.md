@@ -1,5 +1,5 @@
 ---
-title: (cli) AWK [learninx]
+title: (cli) awk [learninx]
 tags: [cli, awk, learninx]
 ---
 

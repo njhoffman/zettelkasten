@@ -11,3 +11,6 @@ Archaellum – Reflections
 Polar Inc. – Regal
 Jerro ft. Sophia Bel – Demons
 Sultan + Shepard – Warsaw
+
+CryingWolf - Sugar Jesus
+Criminal -  Madism

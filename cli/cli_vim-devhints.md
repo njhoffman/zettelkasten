@@ -1,4 +1,3 @@
-
 ---
 title: (cli) Vim [devhints]
 tags: [cli,devhints,vim]
