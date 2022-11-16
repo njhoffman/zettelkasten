@@ -16,7 +16,7 @@ than Perl. For simple text-processing scripts, particularly ones that read
 files line by line and split on delimiters, AWK is probably the right tool for
 the job.
 
-```awk
+```bash
 #!/usr/bin/awk -f
 
 # Comments are like this
@@ -120,14 +120,14 @@ BEGIN {
     n = split("foo:bar:baz", arr, ":");
 
     # You also have associative arrays (actually, they're all associative arrays)
-    assoc["foo"] = "bar";
-    assoc["bar"] = "baz";
+    # assoc["foo"] = "bar";
+    # assoc["bar"] = "baz";
 
     # And multi-dimensional arrays, with some limitations I won't mention here
-    multidim[0,0] = "foo";
-    multidim[0,1] = "bar";
-    multidim[1,0] = "baz";
-    multidim[1,1] = "boo";
+    # multidim[0,0] = "foo";
+    # multidim[0,1] = "bar";
+    # multidim[1,0] = "baz";
+    # multidim[1,1] = "boo";
 
     # You can test for array membership
     if ("foo" in assoc)

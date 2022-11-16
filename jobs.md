@@ -1,3 +1,41 @@
+## JockMKT
+- Boston, MA
+- Fantasy sports into the Robin Hood app
+- 21 people, engineering (12)
+- just closed series B
+- started in 2018, 2020 first season
+- underdogs, prize picks, prediction strike, mojo
+- average user takes a portfolio approach
+- full stack javacript/typescript: react/redux 
+- mobile is react native, postgres database, python, redis
+- golang, AWS
+- tech screen, then take home and second tech screen
+- zoom interviews 
+- poker game 
+
+## FreeWheel
+- Advertising division, video advertising company
+- Linear API team: backend microservices API, supports algorithms, machine learning
+- Golang (98%), Kubernetes, Terraform, AWS, Argo 
+- mysql compliant databases
+- Linear API team (8), working on a piece of a smaller system
+- One more round, talk to manager, tech evaluation in golang
+ 
+## CarGurus
+- Leading projects, working with project managers
+- Massachusetts, full-time remote
+- React native, React, typescript, NodeJS, Java/SQL on backend
+- 40-250, front-end React/React native
+- 1000 people in the company 
+- 60 minutes, 10-15 minute discussion, coderpad exercise (React and Javascript), last 10-15 minutes discussion
+
+
+## KWIL
+- Distribute ledger technology, good for countries that have strong censorship
+- Blockchain, discord, web3.  Social media platform that digested user data and stored in in a decentralized platform.
+- DAOS: publicly traded companies, individuals can purchase tokens
+- Team size of 5, next step: call with Brian (engineer, asks go questions).  
+
 ## iVueit
 - 2 core products: flagship & mobile application
 - Svelte, API uses golang, GRPC instead of traditional rest services
