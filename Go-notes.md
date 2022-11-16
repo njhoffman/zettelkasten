@@ -1,0 +1,214 @@
+---
+title: Go notes
+---
+
+- type comes after the variable name, can be combined: (x, y int)
+- func can return multiple values: func swap(x, y string) (string, string) {}
+- func can return default values: func swap(x, y string) (x, y string) { return; }
+- variable declaration: var i, j int = 1, 2
+- short variable declaration: k := 3
+- types: bool, string, int(8,16,32,64), uint(8,16,32,64,ptr), byte, float32, float64, complex64, complex128
+- zero initial values for uninitialized values: 0, false, "", fmt.Printf("v is of type %T\n", v)
+- for loop: for i := 0; i < 10; i++
+- while loop: for i < 1000
+- if scoped vars: if v := math.Pow(x, n); v < lim V
+- switch cases don't need breaks
+
+```go
+    switch os := runtime.GOOS; os {
+      case "darwin":
+    }
+    switch {
+      case t.Hour() < 12:
+        fmt.Println("Good morning!")
+      case t.Hour() < 17:
+        fmt.Println("Good afternoon.")
+      default:
+        fmt.Println("Good evening.")
+    }
+
+```
+
+- defer statement waits until containing func finishes: defer fmt.Println("world")
+- multiple defers pushed onto a stack, executed LIFO
+
+```go
+var p *int
+p := &i    // point to i
+*p = 21    // set i through the pointer
+
+// struct is a collection of fields
+type Vertex struct {
+  X int
+  Y int
+}
+func main() {
+  // accessed with a dot
+  v := Vertex{1, 2}
+  v.X = 4
+  // or a pointer
+  p := &v
+  p.X = 1e9 // same as (*p).X = 1e9
+}
+
+// struct literal to initialize values
+var (
+  v1 = Vertex{1, 2}  // has type Vertex
+  v2 = Vertex{X: 1}  // Y:0 is implicit
+  v3 = Vertex{}      // X:0 and Y:0
+  p  = &Vertex{1, 2} // has type *Vertex
+)
+
+// arrays
+func main() {
+  var a [1]string
+  a[0] = "Hello"
+  primes := [6]int{2, 3, 5, 7, 11, 13}
+
+  // slice , does not store data, describes section of underlying data
+  var s []int = primes[1:4]
+
+  // array literal
+  [3]bool{true, true, false}
+  // slice literal
+  []bool{true, true, false}
+
+   // slice defaults
+   var a[10]int
+   a[0:10] = a[:10] = a[0:] = a[:]
+   len(s) // number of elements in slice
+   cap(s) // number of elements in underlying array
+
+  // zero value of a slice is nil
+   var s []int
+   s == nil
+
+   // The make function allocates a zeroed array and returns a slice that refers to that array:
+    a := make([]int, 5)  // len(a)=5
+    b := make([]int, 0, 5) // len(b)=0, cap(b)=5
+    b = b[:cap(b)] // len(b)=5, cap(b)=5
+    b = b[1:]      // len(b)=4, cap(b)=4
+
+    // Nested slices
+    tictactoe_board := [][]string{
+      []string{"_", "_", "_"},
+      []string{"_", "_", "_"},
+      []string{"_", "_", "_"},
+    }
+
+   // Appending elements to a slice
+   s = append(s, 2, 3, 4)
+
+    // range form of the for loop
+    var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+    for i, element := range pow {
+      fmt.Printf("2**%d = %d\n", i, element)
+    }
+    // skip value by assigning to '_'
+    for i, _ := range pow {}
+
+    // map maps keys to values
+    var m map[string]Vertex
+    m = make(map[string]Vertex)
+    m["Bell Labs"] = Vertex{
+      40.68433, -74.39967,
+    }
+
+  // map literals are like struct literals but keys are required
+  var m = map[string]Vertex{
+    "Bell Labs": Vertex{
+      40.68433, -74.39967,
+    }
+  }
+  // top-level typename is optional
+  var m = map[string]Vertex{
+    "Bell Labs": { 40.68433, -74.39967 },
+    }
+  }
+
+  m[key] = elem   // insert
+  elem = m[key]   // retrieve
+  delete(m, key)  // remove
+  elem, ok = m[key] // test if key is present, ok = 1 or 0
+
+}
+
+// function closures reference variables outside its body
+func returns_a_closure() func(int) int {
+  sum := 0
+  return func(x int) int {
+    sum += x
+    return sum
+  }
+}
+
+// a method is a function with a receiver argument
+func (v Vertex) Abs() float64 {} // Abs method has receiver of type Vertex named v
+func Abs(v Vertex) float64 {} // rewritten as a regular function
+
+// declaring method on non-struct types is possible
+type MyFloat float64
+func (f MyFloat) Abs() float64 {}
+
+// methods with pointer receivers are more common than value receivers
+func (v *Vertex) Scale(f float64) {
+  v.X = v.X * f
+}
+func main() {
+  v := Vertex{3,4}
+  v.Scale(10)
+}
+
+// functions with pointer arguments must take a pointer
+var v Vertex
+ScaleFunc(v, 5)  // Error
+ScaleFunc(&v, 5) // Ok
+// methods with pointer receivers take either a value or a pointer as the receiver
+v.Scale(5) // Ok (method with pointer receiver called automatically)
+p := &v
+p.Scale(10) // Ok
+
+// functions with value argument must take value of that specific type
+var v Vertex
+fmt.Println(AbsFunc(v)) // OK
+fmt.Println(AbsFunc(&v)) // Error
+//  methods with value receivers take either a value or a pointer as the receiver
+fmt.Println(v.Abs()) // OK
+p := &v
+fmt.Println(p.Abs()) // OK
+
+// Reasons to use a pointer receiver:
+//  1) so method can modify the value that its receiver points to
+//  2) to avoid copying the value on each method call
+
+// goroutine: a lightweight thread managed by the Go runtime
+go f(x, y, z) // starts a new goroutine running f, execution of f happens in new goroutine
+
+// channels: typed conduit through which you can send and receive values with channel operator '<-'
+ch := make(chan int)
+ch <- v    // send v to channel ch
+v := <-ch  // receive from ch and assign value to v
+
+// Buffered channels: sends to a buffered channel block only when the buffer is full,
+// receives block when the buffer is empty.
+ch := make(chan int, 100)
+
+// receiver test if channel is closed with 2nd parameter
+v, ok := <-ch
+// receive value from channel repeatedly until closed
+for i := range c
+
+
+// select statement lets a goroutine wait on multiple operations
+func fibonacci(c, quit chan int) {
+  x, y := 0, 1
+  select {
+    case c <- x:
+      x, y = y, x+y
+    case <-quit:
+      fmt.Println("quit")
+      return
+  }
+}
+
+```

@@ -1,6 +1,6 @@
 ---
-title: (cli) vim [cheatsheet]
-tags: [cli,vim,nvim]
+title: (cli) vim cheatsheet
+tags: [cli,vim,nvim,ibhagwan]
 ---
 
 # iBhagwan's (n)vim cheatsheet
@@ -236,8 +236,16 @@ x X             " delete (cut) character under, before the cursor
     nnoremap Y y$
     xnoremap Y <Esc>y$gv
 
-" By default all modification operators `d c x` copy the modified text to the unnamed `"` register (unless `set clipboard` was set) which can be confusing at first. For example, let's say we want to overwrite a word with yanked text, we would naturally do `ciw<Esc>p` or `ciw<ctrl-r>"` only to find out the same word would be pasted (and not our yanked text), to work around that we can tell the `c` operator to copy the text into the 'blackhole' register instead: `"_ciw`. Alternatively we can also use the yank register `0` which contains the content of the last yank operation using `"0p` or `"0P` (to paste before the cursor). A few useful mappings for my leader key (by default `\`, personally I use `\<space>`) are below, so if I want to change a word without it polluting my registers I would run `<leader>bciw`, similarly if I wish to delete a line I would run `<leader>dd`:
-" In addition to being copied to the default register (`"` or `*`), every 'deleted' text is also copied into the 'small delete' registers {1-9}. To view the latest deletes run `:reg[isters]` or `:di[splay]`. A neat trick to cycle through the delete registers is to use `"1p` and then run `u.`, the undo+repeat advances the 'pasted register' so it will perform `"2p`, `"3p` and so forth.
+" By default all modification operators `d c x` copy the modified text to the unnamed `"` register (unless `set clipboard` was set) which can be confusing at first.
+" For example, let's say we want to overwrite a word with yanked text, we would naturally do
+" `ciw<Esc>p` or `ciw<ctrl-r>"` only to find out the same word would be pasted (and not our yanked text),
+" to work around that we can tell the `c` operator to copy the text into the 'blackhole' register instead: `"_ciw`.
+" Alternatively we can also use the yank register `0` which contains the content of the last yank operation using `"0p` or `"0P` (to paste before the cursor).
+" A few useful mappings
+" f    or my leader key (by default `\`, personally I use `\<space>`) are below# , so if I want to change a word without it polluting my registers I would run `<leader>bciw`, similarly if I wish to delete a line I would run `<leader>dd`:
+"   In addition to being copied to the default register (`"` or `*`), every 'deleted' text is also copied into the 'small delete' registers {1-9}.
+"   To view the latest deletes run `:reg[isters]` or `:di[splay]`.
+"   A neat trick to cycle through the delete registers is to use `"1p` and then run `u.`, the undo+repeat advances the 'pasted register' so it will perform `"2p`, `"3p` and so forth# .
     nnoremap <leader>b "_
     nnoremap <leader>d "_d
     nnoremap <leader>D "_D
