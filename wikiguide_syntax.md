@@ -1,6 +1,10 @@
----
-title: Wiki Syntax Languages
----
+# TOC
+
+*   [TOC](#toc)
+    *   [title: Wiki Syntax Languages](#title-wiki-syntax-languages)
+    *   [Syntax Highlighting](#syntax-highlighting)
+
+## title: Wiki Syntax Languages
 
 ## Syntax Highlighting
 
@@ -53,6 +57,7 @@ SELECT * FROM languages WHERE id = 1;
   }
 ```
 
+
 ```cpp
   include <iostream>
   int main() {
@@ -66,9 +71,11 @@ SELECT * FROM languages WHERE id = 1;
       println!("Rust syntax highligthing");
   }
 ```
+
 ```
 
 NOTE: lua syntax code blocks generate errors
 
 No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
+```

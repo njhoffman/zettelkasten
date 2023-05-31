@@ -1,8 +1,13 @@
----
-title: (cli) make [learninx]
-tags: [cli, make, learninx]
----
+***
 
+title: '(cli) make \[learninx]'
+tags:
+
+*   cli
+*   make
+*   learninx
+
+***
 
 A Makefile defines a graph of rules for creating a target (or targets).
 Its purpose is to do the minimum amount of work needed to update a
@@ -32,24 +37,24 @@ assumes that we are using GNU make which is the standard on Linux.
 
 # A rule - this rule will only run if file0.txt doesn't exist.
 file0.txt:
-	echo "foo" > file0.txt
-	# Even comments in these 'recipe' sections get passed to the shell.
-	# Try `make file0.txt` or simply `make` - first rule is the default.
+ echo "foo" > file0.txt
+ # Even comments in these 'recipe' sections get passed to the shell.
+ # Try `make file0.txt` or simply `make` - first rule is the default.
 
 # This rule will only run if file0.txt is newer than file1.txt.
 file1.txt: file0.txt
-	cat file0.txt > file1.txt
-	# use the same quoting rules as in the shell.
-	@cat file0.txt >> file1.txt
-	# @ stops the command from being echoed to stdout.
-	-@echo 'hello'
-	# - means that make will keep going in the case of an error.
-	# Try `make file1.txt` on the commandline.
+ cat file0.txt > file1.txt
+ # use the same quoting rules as in the shell.
+ @cat file0.txt >> file1.txt
+ # @ stops the command from being echoed to stdout.
+ -@echo 'hello'
+ # - means that make will keep going in the case of an error.
+ # Try `make file1.txt` on the commandline.
 
 # A rule can have multiple targets and multiple prerequisites
 file2.txt file3.txt: file0.txt file1.txt
-	touch file2.txt
-	touch file3.txt
+ touch file2.txt
+ touch file3.txt
 
 # Make will complain about multiple recipes for the same rule. Empty
 # recipes don't count though and can be used to add new dependencies.
@@ -64,7 +69,7 @@ all: maker process
 
 # We can declare things out of order.
 maker:
-	touch ex0.txt ex1.txt
+ touch ex0.txt ex1.txt
 
 # Can avoid phony rules breaking when a real file has the same name by
 .PHONY: all maker process
@@ -79,14 +84,14 @@ ex0.txt ex1.txt: maker
 # Automatic Variables & Wildcards
 #-----------------------------------------------------------------------
 
-process: file*.txt	#using a wildcard to match filenames
-	@echo $^	# $^ is a variable containing the list of prerequisites
-	@echo $@	# prints the target name
-	#(for multiple target rules, $@ is whichever caused the rule to run)
-	@echo $<	# the first prerequisite listed
-	@echo $?	# only the dependencies that are out of date
-	@echo $+	# all dependencies including duplicates (unlike normal)
-	#@echo $|	# all of the 'order only' prerequisites
+process: file*.txt #using a wildcard to match filenames
+ @echo $^ # $^ is a variable containing the list of prerequisites
+ @echo $@ # prints the target name
+ #(for multiple target rules, $@ is whichever caused the rule to run)
+ @echo $< # the first prerequisite listed
+ @echo $? # only the dependencies that are out of date
+ @echo $+ # all dependencies including duplicates (unlike normal)
+ #@echo $| # all of the 'order only' prerequisites
 
 # Even if we split up the rule dependency definitions, $^ will find them
 process: ex1.txt file0.txt
@@ -99,7 +104,7 @@ process: ex1.txt file0.txt
 # Can teach make how to convert certain files into other files.
 
 %.png: %.svg
-	inkscape --export-png $^
+ inkscape --export-png $^
 
 # Pattern rules will only do anything if make decides to create the
 # target.
@@ -107,22 +112,22 @@ process: ex1.txt file0.txt
 # Directory paths are normally ignored when matching pattern rules. But
 # make will try to use the most appropriate rule available.
 small/%.png: %.svg
-	inkscape --export-png --export-dpi 30 $^
+ inkscape --export-png --export-dpi 30 $^
 
 # make will use the last version for a pattern rule that it finds.
 %.png: %.svg
-	@echo this rule is chosen
+ @echo this rule is chosen
 
 # However make will use the first pattern rule that can make the target
 %.png: %.ps
-	@echo this rule is not chosen if *.svg and *.ps are both present
+ @echo this rule is not chosen if *.svg and *.ps are both present
 
 # make already has some pattern rules built-in. For instance, it knows
 # how to turn *.c files into *.o files.
 
 # Older makefiles might use suffix rules instead of pattern rules
 .png.ps:
-	@echo this rule is similar to a pattern rule.
+ @echo this rule is similar to a pattern rule.
 
 # Tell make about the suffix rule
 .SUFFIXES: .png
@@ -138,10 +143,10 @@ name = Ted
 name2="Sarah"
 
 echo:
-	@echo $(name)
-	@echo ${name2}
-	@echo $name    # This won't work, treated as $(n)ame.
-	@echo $(name3) # Unknown variables are treated as empty strings.
+ @echo $(name)
+ @echo ${name2}
+ @echo $name    # This won't work, treated as $(n)ame.
+ @echo $(name3) # Unknown variables are treated as empty strings.
 
 # There are 4 places to set variables.
 # In order of priority from highest to lowest:
@@ -161,19 +166,19 @@ name4 +=grey
 
 # Pattern-specific variable values (GNU extension).
 echo: name2 = Sara # True within the matching rule
-	# and also within its remade recursive dependencies
-	# (except it can break when your graph gets too complicated!)
+ # and also within its remade recursive dependencies
+ # (except it can break when your graph gets too complicated!)
 
 # Some variables defined automatically by make.
 echo_inbuilt:
-	echo $(CC)
-	echo ${CXX}
-	echo $(FC)
-	echo ${CFLAGS}
-	echo $(CPPFLAGS)
-	echo ${CXXFLAGS}
-	echo $(LDFLAGS)
-	echo ${LDLIBS}
+ echo $(CC)
+ echo ${CXX}
+ echo $(FC)
+ echo ${CFLAGS}
+ echo $(CPPFLAGS)
+ echo ${CXXFLAGS}
+ echo $(LDFLAGS)
+ echo ${LDLIBS}
 
 #-----------------------------------------------------------------------
 # Variables 2
@@ -206,10 +211,10 @@ objectfiles = $(patsubst %.c,%.o,$(sourcefiles))
 # Format is $(func arg0,arg1,arg2...)
 
 # Some examples
-ls:	* src/*
-	@echo $(filter %.txt, $^)
-	@echo $(notdir $^)
-	@echo $(join $(dir $^),$(notdir $^))
+ls: * src/*
+ @echo $(filter %.txt, $^)
+ @echo $(notdir $^)
+ @echo $(join $(dir $^),$(notdir $^))
 
 #-----------------------------------------------------------------------
 # Directives
@@ -222,9 +227,9 @@ sport = tennis
 # Conditional compilation
 report:
 ifeq ($(sport),tennis)
-	@echo 'game, set, match'
+ @echo 'game, set, match'
 else
-	@echo "They think it's all over; it is now"
+ @echo "They think it's all over; it is now"
 endif
 
 # There are also ifneq, ifdef, ifndef
@@ -238,6 +243,6 @@ endif
 
 ### More Resources
 
-+ [gnu make documentation](https://www.gnu.org/software/make/manual/)
-+ [software carpentry tutorial](http://swcarpentry.github.io/make-novice/)
-+ learn C the hard way [ex2](http://c.learncodethehardway.org/book/ex2.html) [ex28](http://c.learncodethehardway.org/book/ex28.html)
+*   [gnu make documentation](https://www.gnu.org/software/make/manual/)
+*   [software carpentry tutorial](http://swcarpentry.github.io/make-novice/)
+*   learn C the hard way [ex2](http://c.learncodethehardway.org/book/ex2.html) [ex28](http://c.learncodethehardway.org/book/ex28.html)
